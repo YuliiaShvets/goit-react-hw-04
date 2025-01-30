@@ -1,0 +1,45 @@
+.contactList{
+width: 250px;
+height: 70px;
+display: flex;
+flex-direction: column;
+border: 1px solid black;
+box-shadow: 5px 5px  teal;
+border-radius: 3px;
+padding: 10px;
+gap: 10px;
+background-color: rgb(174, 212, 212);
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+/*@media (max-width: 768px) {
+    .contactList{
+        width: 200px;
+        height: 70px;
+        gap: 2px;
+    }
+}*/
+
+.contact{
+    flex-direction: row;
+}
+
+.contactBtn{
+    width: 70px;
+height: 30px;
+background-color: teal;
+border: none;
+color: white;
+}
+
+.contactSpan{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.icon{
+    width: 20px;
+}

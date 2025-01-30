@@ -1,0 +1,21 @@
+.contact{
+list-style: none;
+align-items: center;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 16px;
+padding-left: 0px;
+}
+
+
+@media (max-width: 375px) {
+    .contact{
+      grid-template-columns: 1fr; 
+      gap: 12px; 
+    }
+}
+@media (max-width: 768px) {
+    .contact{
+      grid-template-columns: 1fr;  
+    }
+}

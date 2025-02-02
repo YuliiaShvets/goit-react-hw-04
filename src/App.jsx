@@ -1,4 +1,4 @@
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import SearchBar from "./components/searchBar/SearchBar.jsx"
 import { useState, useEffect } from "react";
 import fetchImages from "./services/api.js";
@@ -14,7 +14,7 @@ const App = () => {
     const [isError, setIsError] = useState(false);
     const [query, setQuery] = useState("");
     const [images, setImages] = useState([]);
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(12);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
@@ -30,13 +30,13 @@ const App = () => {
       if (data.length === 0) {
         toast.error("No images found for this request!", {
           style: {
-            background: "#b1cc29",
-            color: "#fff",
+            background: "rgb(245, 208, 167)",
+            color: "black",
             fontWeight: "bold",
             padding: "12px",
             borderRadius: "10px",
           },
-          position: "top-left",
+          position: "top-right",
         });
       }
       setImages((image) => [...image, ...data]);
@@ -46,13 +46,13 @@ const App = () => {
         "There was an error loading images, please try again later...",
         {
           style: {
-            background: "red",
-            color: "#fff",
+            background: "rgb(245, 208, 167)",
+            color: "black",
             fontWeight: "bold",
             padding: "12px",
             borderRadius: "10px",
           },
-          position: "top-left",
+          position: "top-right",
         }
       );
     }
@@ -72,11 +72,11 @@ const handleSetQuery = newQuery => {
   console.log(newQuery);
   setQuery(newQuery);
   setImages([]);
-  setPage(0);
+  setPage(1);
 };
 const handleReset = () => {
   setImages([]);
-  setPage(0);
+  setPage(1);
   toast.success(`ALl filters and pages drop to init values`);
 };
 
@@ -102,6 +102,8 @@ const closeModal = () => {
   {images.length > 0 && !isLoading && !isError && (
         <LoadMore handleClick={handleClick} />
       )}
+
+      <Toaster />
        <ImageModal
         isOpen={modalIsOpen}
         imageUrl={selectedImage}

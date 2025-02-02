@@ -9,8 +9,8 @@ const ImageModal = ({ isOpen, imageUrl, onRequestClose }) => {
         isOpen={isOpen}
         onRequestClose={onRequestClose}
         contentLabel="Image Modal"
-        className={s.Modal}
-        overlayClassName={s.Overlay}
+        className={s.modal}
+        overlayClassName={s.overlay}
       >
         <img src={imageUrl} alt="Large view" className={s.modalImage} />
       </Modal>

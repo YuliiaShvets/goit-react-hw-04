@@ -3,13 +3,10 @@
     height: 40px;
     display: flex;
     background-color: teal;
-    
 }
 
 .search{
     margin: auto;
-    
-   
 }
 
 .searchInput{
@@ -24,6 +21,28 @@
     background-color: rgb(245, 208, 167);
 }
 
-.searchIcon{
-    
+@media (max-width: 375px) {
+    .searchForm{
+        height: 80px;
+    }
+    .search{
+        display: flex;
+        flex-direction: column;
+    }
+    .searchInput{
+        width: 200px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .searchBtn{
+        width: 100px;
+        margin: auto;
+        
+    }
+}
+@media (max-width: 768px) {
+    .searchInput{
+        width: 300px;
+        align-items: center;
+    }
 }

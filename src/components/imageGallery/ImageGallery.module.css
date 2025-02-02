@@ -1,0 +1,15 @@
+.imageGallery{
+display: flex;
+list-style: none;
+flex-wrap: wrap;
+column-gap: 10px;
+row-gap: 10px;
+padding: 0 10px;
+margin-bottom: 24px;
+margin-top: 10px;
+}
+
+.imageGalleryItem{
+    width: calc((100% - 3 * 10px) / 4);
+    height: 200px;
+}

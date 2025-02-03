@@ -9,6 +9,7 @@ import ImageModal from "./components/imageModal/ImageModal.jsx";
 import ErrorMessage from "./components/errorMessage/ErrorMessage.jsx";
 
 
+
 const App = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
@@ -18,6 +19,7 @@ const App = () => {
     const [perPage, setPerPage] = useState(12);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
+    
  
     useEffect(() => {
       if (!query) return;
@@ -60,6 +62,7 @@ const App = () => {
       setIsLoading(false)
     }
     };
+
     getData();
   }, [query, page, perPage]);
     
